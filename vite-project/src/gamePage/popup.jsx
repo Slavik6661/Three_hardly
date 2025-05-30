@@ -12,13 +12,11 @@ const Popup = ({
   const handleButtonWin = () => {
     setPopupState(1);
     setScore(0);
-    localStorage.setItem("gameEnd", true);
   };
 
   const handleButtonGameOver = () => {
     setPopupState(1);
     setScore(0);
-    localStorage.setItem("gameEnd", true);
   };
 
   return (

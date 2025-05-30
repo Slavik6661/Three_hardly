@@ -232,7 +232,6 @@ const Game = () => {
 
     if (!stacks || !stacks.children || stacks.children.length === 0) {
       setPopupState(3); // You Win!
-      setFooterMenuState(0);
       return;
     }
 
@@ -255,7 +254,6 @@ const Game = () => {
 
     if (gameOver) {
       setPopupState(2); // Game Over
-      setFooterMenuState(0);
     }
   };
 
