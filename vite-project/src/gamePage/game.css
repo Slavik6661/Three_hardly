@@ -67,7 +67,7 @@ body {
 /* Header */
 .header {
   position: absolute;
-  top: 0px;
+  top: 14px;
   left: 0;
   width: 100%;
   height: 20pt;
@@ -109,9 +109,8 @@ body {
 /* Footer menu */
 .footer-menu {
   position: absolute;
-  bottom: 0px;
-  left: 0;
-  width: 100%;
+  bottom: 100px;
+  width: 50%;
   height: 28pt;
   line-height: 18pt;
   padding: 4pt;
@@ -295,7 +294,7 @@ select {
 .popup {
   z-index: 1000;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   display: flex;
   justify-content: center;

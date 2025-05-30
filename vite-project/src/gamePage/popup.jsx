@@ -36,7 +36,7 @@ const Popup = ({
           Match 4
         </div>
         <hr />
-        <div className="close-button" onClick={onClose}>
+        {/* <div className="close-button" onClick={onClose}>
           <svg viewBox="0 0 20 20">
             <path
               stroke="currentColor"
@@ -45,7 +45,7 @@ const Popup = ({
               d="M0 0 l20 20 M0 20 l20 -20"
             />
           </svg>
-        </div>
+        </div> */}
       </div>
       <div>
         <h1>Game Over</h1>

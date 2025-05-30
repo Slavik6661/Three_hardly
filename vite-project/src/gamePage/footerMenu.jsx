@@ -1,11 +1,8 @@
-// src/components/FooterMenu.jsx
-import React from "react";
-
-const FooterMenu = ({ show }) => {
+const FooterMenu = ({ show, setFooterMenuState, setPopupState }) => {
   return (
     <div className="footer-menu" data-show={show}>
       <div>
-        <div className="home-button">
+        <div className="home-button" onClick={() => setFooterMenuState(2)}>
           <svg viewBox="0 0 20 20">
             <g>
               <circle
@@ -22,7 +19,7 @@ const FooterMenu = ({ show }) => {
         </div>
       </div>
       <div>
-        <div className="close-button">
+        <div className="close-button" onClick={() => setFooterMenuState(1)}>
           <svg viewBox="0 0 20 20">
             <g>
               <path
@@ -34,7 +31,7 @@ const FooterMenu = ({ show }) => {
             </g>
           </svg>
         </div>
-        <div className="new-button">
+        <div className="new-button" onClick={() => setPopupState(1)}>
           <svg viewBox="0 0 20 20">
             <g>
               <path

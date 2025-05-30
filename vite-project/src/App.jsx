@@ -1,6 +1,5 @@
 import { useState } from "react";
-import MainGamePage from "./gamePage/gamePage";
-// import './App.css'
+import Game from "./gamePage/game";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,7 +14,7 @@ function App() {
         alignItems: "center",
       }}
     >
-      <MainGamePage />
+      <Game />
     </div>
   );
 }

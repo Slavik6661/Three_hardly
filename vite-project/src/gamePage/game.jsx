@@ -15,7 +15,7 @@ const Game = () => {
   const [matches, setMatches] = useState(null);
   const [undoHist, setUndoHist] = useState(null);
   const [popupState, setPopupState] = useState(1); //  0: new game, 1: game over, 2: win
-  const [footerMenuState, setFooterMenuState] = useState(0);
+  const [footerMenuState, setFooterMenuState] = useState(1);
   const [blocksBox, setBlocksBox] = useState([]);
 
   useEffect(() => {
@@ -291,7 +291,11 @@ const Game = () => {
       <Header score={score} onUndo={undo} disabled={!undoHist} />
       <div className="title"></div>
       <div ref={stacksRef} className="stacks" onClick={removeStuff}></div>
-      <FooterMenu show={footerMenuState} />
+      <FooterMenu
+        show={footerMenuState}
+        setFooterMenuState={setFooterMenuState}
+        setPopupState={setPopupState}
+      />
       <Popup
         show={popupState}
         onClose={() => setPopupState(0)}
