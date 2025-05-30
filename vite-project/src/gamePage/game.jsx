@@ -185,20 +185,18 @@ const Game = () => {
       const d = Math.random() * rec.height * 10 - rec.height * 5;
       const r = (d / (rec.height * Math.PI)) * 360;
 
-      const fallDiv = document.createElement("div");
-      fallDiv.className = "fall";
-      fallDiv.style.left = `${rec.x}px`;
-      fallDiv.style.top = `${rec.y}px`;
-      fallDiv.style.setProperty("--ty", `${dist}px`);
-      fallDiv.style.setProperty("--tx", `${d}px`);
-      fallDiv.style.setProperty("--trz", `${r}deg`);
-      fallDiv.style.setProperty("--del", `${Math.random() * 0.125}`);
-      fallDiv.style.setProperty("--dur", `${0.125 + index * 0.125}`);
+      const fallBlock = block.cloneNode(true);
+      fallBlock.className = "fall";
+      fallBlock.style.left = `${rec.x}px`;
+      fallBlock.style.top = `${rec.y}px`;
+      fallBlock.style.setProperty("--ty", `${dist}px`);
+      fallBlock.style.setProperty("--tx", `${d}px`);
+      fallBlock.style.setProperty("--trz", `${r}deg`);
+      fallBlock.style.setProperty("--del", `${Math.random() * 0.125}`);
+      fallBlock.style.setProperty("--dur", `${0.125 + index * 0.125}`);
 
-      const face = document.createElement("div");
-      face.dataset.type = block.dataset.type;
-      fallDiv.appendChild(face);
-      document.body.appendChild(fallDiv);
+      document.body.appendChild(fallBlock);
+      block.remove();
 
       if (parent.dataset.extra > 0) {
         const localBlocksBoxCopy = [...blocksBox];

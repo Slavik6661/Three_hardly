@@ -4,7 +4,6 @@ const MainGamePage = () => {
   return (
     <>
       <div>
-        {/* <MenuGame /> */}
         <Game />
       </div>
     </>
